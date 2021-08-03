@@ -27,6 +27,11 @@ export class ServiceHttpService {
         .put<any>(this.URL_BASIC + '/team/update/'+ data.id , data)
         .pipe(catchError(this.handleError)); 
     }
+    deleteTeam(id: number){
+        return this.http
+        .delete<any>(this.URL_BASIC + '/team/delete/' +id )
+        .pipe(catchError(this.handleError)); 
+    }
 
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {

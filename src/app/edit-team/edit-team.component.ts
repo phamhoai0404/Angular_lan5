@@ -64,12 +64,38 @@ export class EditTeamComponent implements OnInit {
     editService(){
         this.service.editTeam(this.team).subscribe(
             data =>{
-                console.log(data);
-                this.dialog.closeAll();
+                console.log("trả về dữ liệu trong editService", data);
+
+                //Trường hợp hay nhất nhưng code hơi dài nhể
+                this.loadDataTeam();
+
+                //làm như này có thể xảy ra tình huống bất đồng bộ
+                //làm kiểu này thì viết ở đây ngắn hơn và tập trung thì viết ở service thôi
+                // this.loadDataTeam2();
             },
             error => console.log("lỗi ", error.data)
             
         )
+    }
+
+    //Nhưng mà nếu như loadDataTeam2() nếu xảy ra bất đồng bộ thì không được đâu
+    //Phải làm trực tiếp như ở loadDataTeam() thì mới được tránh trường hợp bất đồng bộ
+    loadDataTeam(){
+        this.service.getAllTeam().subscribe(
+            data => {
+                this.common.setDataTeam(data);
+                this.dialog.closeAll();
+            },
+            error => {
+                console.log(error.data);
+            }
+        )
+    }
+
+    //Mình nghĩ là nếu mà bình thường mạng nhanh thì được như này 
+    loadDataTeam2(){
+        this.common.hoa();
+        this.dialog.closeAll();
     }
 
 }

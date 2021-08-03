@@ -31,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Thêm
 import { EditTeamComponent } from './edit-team/edit-team.component';
+import { RemoveTeamComponent } from './remove-team/remove-team.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { EditTeamComponent } from './edit-team/edit-team.component';
     FormTeamComponent,
     //DialogContentExampleDialogComponent,
    
-    EditTeamComponent
+    EditTeamComponent,
+    RemoveTeamComponent
   ],
   imports: [
     BrowserModule,

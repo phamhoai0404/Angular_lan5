@@ -1,0 +1,11 @@
+
+<h1 align="center">Xóa đơn vị</h1>
+
+<mat-dialog-content class="mat-typography">
+    <p style="font-size: large; text-align: center;">Bạn có chắc chắn muốn xóa ????</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-raised-button class="cancelDelete" mat-dialog-close>Hủy</button>
+    <button mat-raised-button color="warn" (click) ="buttonRemoveTeam()"  cdkFocusInitial>Xóa</button> <!-- mình thấy cái này chưa cần thiết [mat-dialog-close]="xinhgaiqua()" -->
+   
+</mat-dialog-actions>

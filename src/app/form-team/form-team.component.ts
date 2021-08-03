@@ -56,8 +56,14 @@ export class FormTeamComponent implements OnInit {
             data => {
                 this.common.increaseTeam();
                 this.teamGroup.reset();//Xóa dữ liệu cũ
-                this.router.navigate(['/student']);
+                
+                this.loadDataTeam();
 
+               //Viết như này thì có thể xảy ra tình huống bất đồng bộ mình nghĩ thế
+               //Theo mình nên viết this.loadDataTeam(); thay cho this.common.hoa();
+               //this.common.hoa();
+
+                this.router.navigate(['/student']);
             },
             error => console.log(error.data)
         )
@@ -77,5 +83,15 @@ export class FormTeamComponent implements OnInit {
 
         //Thực hiện post lên serve và xóa dữ liệu cũ tăng Bagde và thực hiển chuyển trang
         this.addTeamSavePage(this.team);
+    }
+    loadDataTeam(){
+        this.service.getAllTeam().subscribe(
+            data => {
+                this.common.setDataTeam(data);
+            },
+            error => {
+                console.log(error.data);
+            }
+        )
     }
 }

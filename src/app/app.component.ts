@@ -43,6 +43,9 @@ export class AppComponent implements OnInit {
         )
     }
 
+
+
+    //Phục vụ cho việc trình bày
     public openLeftSide() {
         this.isOpened = !this.isOpened;
         this.sidenav.toggle();
