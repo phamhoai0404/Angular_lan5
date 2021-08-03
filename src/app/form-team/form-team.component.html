@@ -1,0 +1,16 @@
+<div class="contents">
+    <form  [formGroup] = "teamGroup">
+        <h1>Thêm mới 1 đơn vị</h1>
+        <mat-form-field>
+            <mat-label>Mã đơn vị </mat-label>
+            <input matInput type="text" formControlName="teamId">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tên đơn vị </mat-label>
+            <input matInput type="text" formControlName="teamName">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button color="accent" (click) = "saveContinue()"><mat-icon>add</mat-icon>&nbsp;&nbsp;Thêm tiếp </button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent" (click) = "saveAndPageMain()"><mat-icon>add</mat-icon>&nbsp;&nbsp;Thêm và trở về trang chính</button>
+    
+</div>

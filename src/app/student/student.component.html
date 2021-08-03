@@ -1,0 +1,23 @@
+<p>student works!</p>
+<p>Bảng sinh viên nhá</p>
+
+<table id = "customers" style="border-collapse: collapse">
+    <tr class ="addTeam" ><td colspan="4"><button mat-raised-button color="accent" (click) = "buttonAddTeam()"><mat-icon>add</mat-icon>&nbsp;&nbsp;Thêm đơn vị (sinh viên) </button></td></tr>
+    <tr>
+        <th>ID</th>
+        <th>Tên Team</th>
+        <th>Tên Maker</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr *ngFor="let item of doituong">
+        <td title="Tên id">{{item?.id}}</td> <!-- Kiểu như nó tồn tại thì nó in ra nhá  -->
+        <td title="Tên name">{{item?.teamName}}</td>
+        <td title="Tên maker">{{item?.teamMaker}}</td>
+        <td class="actionTeam">
+            <mat-icon class="editTeam" title="Nhấn vào để sửa" (click) = "editTeam(item)">edit</mat-icon>
+            <mat-icon class="deleteTeam" title="Nhấn vào để xóa"  (click) = "deleteTeam(item)">delete</mat-icon>
+            
+        </td>
+    </tr>
+</table>
+<!-- <button mat-button (click)="openDialog()">Open dialog</button> -->

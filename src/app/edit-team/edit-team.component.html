@@ -1,0 +1,24 @@
+
+<h1 mat-dialog-title align="center">Sửa Đơn vị</h1>
+
+<mat-dialog-content class="mat-typography">
+    <!--  class = mat-typography này được định nghĩa sẵn rồi đó  -->
+    <form [formGroup]="teamGroup">
+        <mat-form-field>
+            <mat-label>Mã đơn vị </mat-label>
+            <input matInput type="text" formControlName="teamId">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Tên đơn vị </mat-label>
+            <input matInput type="text" formControlName="teamName">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <!-- Cái test đáng nhớ -->
+    <!-- <button mat-raised-button color="warn" (click) ="donha()">Cuộc đời tôi nha</button> -->
+    <button mat-raised-button color="warn" mat-dialog-close>Hủy</button>
+    <button mat-raised-button class="buttonEditTeam" (click) ="buttonEditTeam()"  cdkFocusInitial>Sửa</button> <!-- mình thấy cái này chưa cần thiết [mat-dialog-close]="xinhgaiqua()" -->
+   
+</mat-dialog-actions>

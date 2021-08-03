@@ -1,0 +1,64 @@
+
+//Chú ý cái này là badge chính là phần đỏ đỏ ở tin kiểu thông báo tin nhắn chua đọc ấy
+.badge {
+    position: relative;
+    top: -10px;
+    left: -7px;
+    font-size: x-small;
+    padding: 1px 5px 1px 5px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+//cái này
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+}
+.deleteTeam{
+    color: red !important;
+    cursor: pointer;//Nghĩa là con trỏ chuột sẽ chỉ ngón tay vào deleteTeam ấy 
+}
+.editTeam{
+    color: blue !important; 
+    cursor: pointer;//Nghĩa là con trỏ chuột sẽ chỉ ngón tay vào editTeam ấy 
+}
+.addTeam{
+    border: none !important;
+}
+.addTeam td{
+    border: none !important;
+}
+.addTeam td:hover{
+    background-color: white !important;
+    background: white !important;
+}
+.actionTeam{
+    display: flex;
+    justify-content: space-around;
+}
