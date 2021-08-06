@@ -14,7 +14,7 @@
                 <mat-icon matBadge="{{number}}" matBadgeColor="warn">folder_shared</mat-icon>
                 <!-- <span *ngIf="totalStudents > 0" matBadge="{{ totalStudents }}" matBadgeColor="warn"
                     matBadgeSize="small"> -->
-                    <!-- Sinh Viên &nbsp; -->
+                <!-- Sinh Viên &nbsp; -->
                 <!-- </span> -->
             </a>
             <!-- Nếu muốn thêm thì chỉ cần thêm ở đây thôi nhá rất đơn giản -->
@@ -22,6 +22,10 @@
                 <mat-icon>person</mat-icon> Vài Nét
             </a> -->
         </div>
+        <button (click)="buttonLogin()" mat-raised-button color="warn" class = "buttonLogin" >
+            Đăng nhập &nbsp;
+            <mat-icon>input</mat-icon>
+        </button>
     </mat-toolbar-row>
 
 </mat-toolbar>

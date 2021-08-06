@@ -42,6 +42,9 @@ export class AppComponent implements OnInit {
             error => console.error(error.data)
         )
     }
+    buttonLogin(){
+        console.log("Đã kích vào Login");
+    }
 
 
 

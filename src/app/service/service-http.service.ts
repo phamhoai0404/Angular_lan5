@@ -29,7 +29,7 @@ export class ServiceHttpService {
     }
     deleteTeam(id: number){
         return this.http
-        .delete<any>(this.URL_BASIC + '/team/delete/' +id )
+        .delete<any>(this.URL_BASIC + '/team/delete/' + id )
         .pipe(catchError(this.handleError)); 
     }
 

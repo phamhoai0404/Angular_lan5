@@ -32,6 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Thêm
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import { RemoveTeamComponent } from './remove-team/remove-team.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { RemoveTeamComponent } from './remove-team/remove-team.component';
     //DialogContentExampleDialogComponent,
    
     EditTeamComponent,
-    RemoveTeamComponent
+    RemoveTeamComponent,
+    LoginComponent,
+    SignUpComponent,
+
   ],
   imports: [
     BrowserModule,
