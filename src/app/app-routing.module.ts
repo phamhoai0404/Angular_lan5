@@ -6,14 +6,18 @@ import { FormTeamComponent } from './form-team/form-team.component';
 
 
 const routes: Routes = [
-  {path:'', component:InformationComponent },
-  {path:'information', component:InformationComponent },
-  {path:'student', component:StudentComponent },
-  {path:'formStudent', component:FormTeamComponent },
+    {
+        path: '',
+        redirectTo:'information',
+        pathMatch:'full'
+    },
+    { path: 'information', component: InformationComponent },
+    { path: 'student', component: StudentComponent },
+    { path: 'formStudent', component: FormTeamComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
