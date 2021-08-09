@@ -7,9 +7,9 @@ import { FormTeamComponent } from './form-team/form-team.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: '',//Nếu mà '' thì đường đẫn nó mặc định tới 'information' là component InformationComponent
         redirectTo:'information',
-        pathMatch:'full'
+        pathMatch:'full'//cái này phải viết thêm vào không sẽ báo lỗi 
     },
     { path: 'information', component: InformationComponent },
     { path: 'student', component: StudentComponent },
